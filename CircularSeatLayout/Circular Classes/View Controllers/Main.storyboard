@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="du0-c3-QvG">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--InitialVC-->
+        <scene sceneID="trC-KO-GCj">
+            <objects>
+                <viewController storyboardIdentifier="InitialVC" id="du0-c3-QvG" customClass="InitialVC" customModule="CircularSeatLayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oSG-P6-8OF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxo-ef-uBZ">
+                                <rect key="frame" x="37.666666666666657" y="384" width="300" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="AEg-60-J6f"/>
+                                    <constraint firstAttribute="height" constant="44" id="iUJ-Qz-iKP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Check Seat Layout">
+                                    <color key="titleColor" red="0.34292634" green="0.17100289339999999" blue="0.19121449709999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="checkSeatLayoutAction:" destination="du0-c3-QvG" eventType="touchUpInside" id="PEx-7Z-mTz"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="25R-Zf-3JR">
+                                <rect key="frame" x="17.666666666666657" y="308" width="340" height="36"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Number of Seats to be selected" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E59-vC-W2n">
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="36"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="18"/>
+                                        <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="22o-oF-eLW">
+                                        <rect key="frame" x="260" y="0.0" width="80" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="rY2-lW-JGG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="340" id="Z5r-Do-t0l"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dXC-c1-UVi">
+                                <rect key="frame" x="17.666666666666657" y="468" width="340" height="21.666666666666686"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Seats: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2x9-ab-fXq">
+                                        <rect key="frame" x="0.0" y="0.0" width="168" height="21.666666666666668"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Poa-FO-fXq">
+                                        <rect key="frame" x="172" y="0.0" width="168" height="21.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Circular Seat Layout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSh-4K-XFP">
+                                <rect key="frame" x="42.666666666666657" y="91" width="289.66666666666674" height="27"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vga-bL-OJ3"/>
+                        <color key="backgroundColor" red="0.5812356222992312" green="0.83936621881927498" blue="1" alpha="0.77787407077088644" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="dXC-c1-UVi" firstAttribute="leading" secondItem="25R-Zf-3JR" secondAttribute="leading" id="Ggt-l1-BUS"/>
+                            <constraint firstItem="Sxo-ef-uBZ" firstAttribute="centerX" secondItem="oSG-P6-8OF" secondAttribute="centerX" id="HEF-dX-nuf"/>
+                            <constraint firstItem="Sxo-ef-uBZ" firstAttribute="centerY" secondItem="oSG-P6-8OF" secondAttribute="centerY" id="It6-o2-VSI"/>
+                            <constraint firstItem="QSh-4K-XFP" firstAttribute="centerX" secondItem="oSG-P6-8OF" secondAttribute="centerX" id="ajr-w0-eTG"/>
+                            <constraint firstItem="QSh-4K-XFP" firstAttribute="top" secondItem="vga-bL-OJ3" secondAttribute="top" constant="44" id="b9I-lm-VTk"/>
+                            <constraint firstItem="dXC-c1-UVi" firstAttribute="trailing" secondItem="25R-Zf-3JR" secondAttribute="trailing" id="fZt-uE-qdy"/>
+                            <constraint firstItem="25R-Zf-3JR" firstAttribute="centerX" secondItem="QSh-4K-XFP" secondAttribute="centerX" id="kSf-Cy-cpz"/>
+                            <constraint firstItem="dXC-c1-UVi" firstAttribute="top" secondItem="Sxo-ef-uBZ" secondAttribute="bottom" constant="40" id="nWM-pb-u5W"/>
+                            <constraint firstItem="Sxo-ef-uBZ" firstAttribute="top" secondItem="25R-Zf-3JR" secondAttribute="bottom" constant="40" id="zrN-8E-Fm7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="numberOfSeats" destination="22o-oF-eLW" id="xR5-Pg-YoG"/>
+                        <outlet property="seatLbl" destination="Poa-FO-fXq" id="4lc-Yb-RWP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s06-Fg-Mn5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-760.79999999999995" y="662.06896551724139"/>
+        </scene>
+        <!--Circular Seat LayoutVC-->
+        <scene sceneID="cTx-wY-Q4H">
+            <objects>
+                <viewController storyboardIdentifier="CircularSeatLayoutVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gdK-OJ-kFX" customClass="CircularSeatLayoutVC" customModule="CircularSeatLayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fgz-uG-FsU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x1l-bv-FbE">
+                                <rect key="frame" x="0.0" y="47" width="375" height="731"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="09f-Yh-FfR">
+                                        <rect key="frame" x="1" y="0.0" width="1500" height="877.33333333333337"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="09f-Yh-FfR" secondAttribute="trailing" id="3Lx-ck-JnY"/>
+                                    <constraint firstItem="09f-Yh-FfR" firstAttribute="width" secondItem="x1l-bv-FbE" secondAttribute="width" multiplier="4" priority="250" id="9SP-jN-FXN"/>
+                                    <constraint firstItem="09f-Yh-FfR" firstAttribute="top" secondItem="x1l-bv-FbE" secondAttribute="top" id="Rvf-Jp-VHl"/>
+                                    <constraint firstItem="09f-Yh-FfR" firstAttribute="height" secondItem="x1l-bv-FbE" secondAttribute="height" multiplier="1.2" priority="250" id="dgV-ja-TBV"/>
+                                    <constraint firstAttribute="bottom" secondItem="09f-Yh-FfR" secondAttribute="bottom" id="iVu-xZ-PAv"/>
+                                    <constraint firstItem="09f-Yh-FfR" firstAttribute="leading" secondItem="x1l-bv-FbE" secondAttribute="leading" constant="1" id="pp3-is-jH9"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="RMh-ia-Yi1"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="JRc-3L-Xp9"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3vZ-W9-iWQ"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="x1l-bv-FbE" firstAttribute="leading" secondItem="3vZ-W9-iWQ" secondAttribute="leading" id="ZBd-Ub-cfa"/>
+                            <constraint firstItem="3vZ-W9-iWQ" firstAttribute="trailing" secondItem="x1l-bv-FbE" secondAttribute="trailing" id="aJB-6v-1TY"/>
+                            <constraint firstItem="3vZ-W9-iWQ" firstAttribute="bottom" secondItem="x1l-bv-FbE" secondAttribute="bottom" id="lqW-zB-AEr"/>
+                            <constraint firstItem="x1l-bv-FbE" firstAttribute="top" secondItem="3vZ-W9-iWQ" secondAttribute="top" id="x42-Y7-ao4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="x1l-bv-FbE" id="9Ua-P2-8bL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uAD-Sr-DAO" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-0.26478375992939096" y="662.90322580645159"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
